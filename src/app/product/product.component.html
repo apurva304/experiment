@@ -1,0 +1,18 @@
+<md-sidenav-container>
+    <md-sidenav mode="side" align="start" opened="true" style="width:25%;" fxLayout="column" fxLayoutAlign="stretch" class="mat-elevation-z6">
+        <button md-raised-button (click)="openCatDialog()" color="primary" style="margin:10px;">
+            <md-icon class="md-48">add</md-icon>
+            <label >Add category</label>
+        </button>
+        <md-nav-list>
+            <a md-list-item *ngFor="let item of items | async" (click)="click(item.$key,item.name)" [class.selected]="item.$key === key">
+                 <span md-line>{{item.name}}</span>   
+            </a>
+        </md-nav-list>
+    </md-sidenav>
+    <div class="main-div">
+        <h3 *ngIf="!key">No category Selected</h3>
+        <h3 *ngIf="name">Category : {{name}}</h3>
+        <app-detail *ngIf="key" [catKey]="key"></app-detail>
+    </div>
+</md-sidenav-container>

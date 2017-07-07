@@ -1,0 +1,20 @@
+<ng-container *ngFor="let prod of prods | async">
+    <md-card *ngIf="prod.catid == catKey && prod.brandid == brandid" style="margin-left:20px;margin-right:20px;margin-bottom:20px;" class="mat-elevation-z6 card">
+      <img [src]="prod.imageUrl" class="md-card-image image" alt="image caption">
+      <md-card-content>
+        <h3>{{prod.name}}</h3>
+        <p>{{prod.des}}</p>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <button md-button (click)="delete(prod.$key)">delete</button>
+      </md-card-actions>
+    </md-card>
+     </ng-container>
+  
+    
+ 
+<button md-fab (click)="openProductDialog()" color="accent" style="position: fixed;
+            bottom: 40px;
+            right: 40px;">
+            <md-icon class="md-36|">add</md-icon>
+        </button>

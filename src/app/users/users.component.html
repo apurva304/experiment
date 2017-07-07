@@ -1,0 +1,30 @@
+<div id="container">
+<div fxLayout="column" fxLayoutAlign="center center" id = "print-section">
+<md-card style="margin:20px;width:fit-content">
+  <md-card-content >
+    <table align="center" border="1">
+      <th>name</th>
+      <th>phone</th>
+      <th>city</th>
+      <th>IsFarmer</th>
+     
+      <th>zip code</th>
+
+      <tr *ngFor="let user of users | async">
+        <td align="center">{{user.name}}</td>
+        <td align="center">{{user.phone}}</td>
+        <td align="center">{{user.city}}</td>
+        <td align="center">{{user.farmer}}</td>
+        <td align="center">{{user.zip}}</td>
+      </tr>
+    </table>
+  </md-card-content>
+</md-card>
+</div>
+
+<button md-fab (click)="print()" style="position: fixed;
+            bottom: 40px;
+            right: 40px;">
+            <md-icon class="md-36|">print</md-icon>
+        </button>
+</div>

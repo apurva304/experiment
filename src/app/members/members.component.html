@@ -1,0 +1,19 @@
+<div>
+    <md-toolbar layout-fill flex color='primary'>
+        <div class="md-toolbar-tools" fxLayout="row" fxLayoutAlign="space-around center">
+      <h3>App Title</h3>
+			<button  md-raised-button (click)="logout()" color="primary">Logout</button>
+      </div>
+    </md-toolbar>
+      <md-tab-group md-stretch-tabs="always" layout-fill flex>
+  		<md-tab label="Products">
+            <app-product style="height:100%;"></app-product>
+  		</md-tab>
+  		<md-tab label="Notification" >
+            <app-notification></app-notification>
+  		</md-tab>
+  		<md-tab label="Users">
+            <app-users></app-users>
+  		</md-tab>
+  	</md-tab-group>
+</div>

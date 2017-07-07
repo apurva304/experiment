@@ -1,0 +1,15 @@
+<md-card style="margin:20px;" fxLayout="column" fxLayoutAlign="center stretch">
+  <md-card-content  fxLayout="column" fxLayoutAlign="center stretch">
+    <h3>Notification</h3>
+    <md-input-container md-no-float >
+       <input mdInput placeholder="Title" #title>
+    </md-input-container>
+    <md-input-container md-no-float >
+       <input mdInput placeholder="Message" #message>
+    </md-input-container>
+  </md-card-content>
+  <md-card-actions fxLayout="row" fxLayoutAlign="center end">
+    <button md-raised-button (click)="notify(title.value,message.value)" color="primary">Send</button>
+    <button md-raised-button (click)="onClick" color="accent">Cancel</button>
+  </md-card-actions>
+</md-card>

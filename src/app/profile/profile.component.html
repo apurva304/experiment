@@ -1,0 +1,39 @@
+<md-card style="margin:20px;" fxLayout="column" fxLayoutAlign="center stretch">
+  <md-card-content fxFlex>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+    <h3>Please Provide the following information for your profile</h3>
+      </div>
+    <div fxLayout='row' fxLayoutAlign="center space-around">
+      <md-icon class="md-36">
+        	person
+			</md-icon>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <md-input-container color='accent' fxFlex="80" >
+        <input mdInput placeholder="company name" [(ngModel)]="name" />
+      </md-input-container>
+    </div>
+     <div fxLayout='row' fxLayoutAlign="center space-around">
+      <md-icon class="md-36">
+        	phone
+			</md-icon>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <md-input-container color='accent' fxFlex="80">
+        <input mdInput placeholder="phone number" [(ngModel)]="phone" [disabled]="true"/>
+      </md-input-container>
+    </div>
+     <div fxLayout='row' fxLayoutAlign="center space-around">
+      <md-icon class="md-36">
+        	place
+			</md-icon>
+      
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <md-input-container color='accent'   fxFlex="80" >
+        <input mdInput placeholder="address" [(ngModel)]="add" />
+      </md-input-container>
+    </div>
+  </md-card-content>
+  <md-card-actions fxLayout="row" fxLayoutAlign="center end">
+    <button md-raised-button (click)="save()">Action</button>
+    <button md-raised-button (click)="edit()">cancel</button>
+  </md-card-actions>
+</md-card>
